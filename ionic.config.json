@@ -1,0 +1,7 @@
+{
+  "name": "Lifeboat",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
