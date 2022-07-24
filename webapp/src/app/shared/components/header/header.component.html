@@ -1,0 +1,37 @@
+<ion-header>
+  <div class="header">
+    <div class="authentication">
+      <ng-container *ngIf="!user">
+        <ion-button id="sign-in-button">Sign in </ion-button>
+        <ion-popover #signinpopover trigger="sign-in-button">
+          <ng-template>
+            <ion-content>
+              <ion-text>Choose an username</ion-text>
+              <ion-input
+                inputmode="text"
+                placeholder="username"
+                [(ngModel)]="username"
+                maxlength="20"
+                minlength="3"
+              ></ion-input>
+              <ion-button (click)="signIn()"> Sign in </ion-button>
+            </ion-content>
+          </ng-template>
+        </ion-popover>
+      </ng-container>
+      <ng-container *ngIf="user">
+        <ion-button id="sign-out-button">
+          {{ user.username }}
+          <ion-icon slot="end" name="chevron-down-outline"></ion-icon
+        ></ion-button>
+        <ion-popover #signoutpopover trigger="sign-out-button">
+          <ng-template>
+            <ion-content>
+              <ion-button (click)="signOut()"> Sign out </ion-button>
+            </ion-content>
+          </ng-template>
+        </ion-popover>
+      </ng-container>
+    </div>
+  </div>
+</ion-header>

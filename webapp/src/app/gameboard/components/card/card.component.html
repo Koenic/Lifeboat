@@ -1,0 +1,8 @@
+<div class="card" [class.flipped]="card.flipped" (click)="flip()">
+  <div class="cardface front">
+    <img [src]="card.frontImage" alt="altText" />
+  </div>
+  <div class="cardface back">
+    <img [src]="card.backImage" alt="altText" />
+  </div>
+</div>
