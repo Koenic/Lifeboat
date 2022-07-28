@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES2022",
+    "paths": {
+      "@customTypes/*": ["src/customTypes/*"],
+      "@endpoints": ["src/endpoints"],
+      "@libs/*": ["src/libs/*"]
+    }
+  },
+  "compileOnSave": true,
+  "include": ["src"]
+}
